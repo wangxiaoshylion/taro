@@ -28,7 +28,8 @@
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "test": "jest",
-    "cz": "cz"
+    "cz": "cz",
+    "lint-staged": "lint-staged"
   },
   "browserslist": [
     "last 3 versions",
@@ -96,7 +97,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx,jsx}": "eslint --cache"
+    "*.{js,jsx}": ["eslint --fix", "git add"],
+    "*.{css,scss}": ["stylelint --fix", "git add"]
   },
   "config": {
     "commitizen": {
