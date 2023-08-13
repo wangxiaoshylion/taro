@@ -27,7 +27,8 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
-    "test": "jest"
+    "test": "jest",
+    "cz": "cz"
   },
   "browserslist": [
     "last 3 versions",
@@ -36,6 +37,7 @@
   ],
   "author": "",
   "dependencies": {
+    "-": "^0.0.1",
     "@babel/runtime": "^7.21.5",
     "@tarojs/components": "3.6.11",
     "@tarojs/helper": "3.6.11",
@@ -51,6 +53,9 @@
     "@tarojs/runtime": "3.6.11",
     "@tarojs/shared": "3.6.11",
     "@tarojs/taro": "3.6.11",
+    "D": "^1.0.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -92,5 +97,10 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx,jsx}": "eslint --cache"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }
