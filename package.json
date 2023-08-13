@@ -97,8 +97,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": ["eslint --fix", "git add"],
-    "*.{css,scss}": ["stylelint --fix", "git add"]
+    "*.{js,tsx}": ["eslint --fix", "git add"],
+    "*.{css,less}": ["stylelint --fix", "git add"]
   },
   "config": {
     "commitizen": {
