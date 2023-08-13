@@ -1,7 +1,19 @@
 {
-  "extends": ["taro/react"],
+  "extends": ["taro/react"], // extends-可以继承一些现成的eslint规则包（eslint-config-airbnb、eslint-config-google）
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
-  }
+  },
+  "parser": "@typescript-eslint/parser", // 解析器-解析代码的插件工具，将源码解析为AST抽象语法树，插件可以执行静态分析、检查和转换
+  "parserOptions": {
+    "ecmaVersion": 6, // es版本
+    "sourceType": "module", // 代码使用模块化
+    "ecmaFeatures": {
+      "jsx": true,
+      "legacyDecorators": true, // 允许使用修饰符
+      "globalReturn": false // 设置为 true，当 sourceType 为 script 时，允许全局 return
+    },
+    "requireConfigFile": true, // 是否需要 babel 配置文件
+    "allowImportExportEverywhere": false // 设置为 true，import 和 export 声明 可以出现在文件的任务位置，否则只能出现在顶部
+  } // 解析器配置项
 }

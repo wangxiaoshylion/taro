@@ -4,6 +4,8 @@ import './index.less'
 
 export default function Index() {
 
+  const a = 'all';
+
   useLoad(() => {
     console.log('Page loaded.')
   })
