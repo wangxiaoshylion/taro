@@ -71,10 +71,10 @@
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.0",
     "@types/webpack-env": "^1.13.6",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
     "babel-preset-taro": "3.6.11",
-    "eslint": "^8.12.0",
+    "eslint": "^8.47.0",
     "eslint-config-taro": "3.6.11",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-react": "^7.8.2",
@@ -91,18 +91,20 @@
     "typescript": "^4.1.0",
     "webpack": "5.78.0"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{js,tsx}": ["eslint --fix", "git add"],
-    "*.{css,less}": ["stylelint --fix", "git add"]
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
