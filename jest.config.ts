@@ -1,6 +1,10 @@
-const defineJestConfig = require('@tarojs/test-utils-react/dist/jest.js').default
+const defineJestConfig = require('@tarojs/test-utils-react/dist/jest.js').default;
 
 module.exports = defineJestConfig({
+  verbose: true,
   testEnvironment: 'jsdom',
-  testMatch: ['<rootDir>/__tests__/?(*.)+(spec|test).[jt]s?(x)']
-})
+  testMatch: ['**/__tests__/**/*.test.[jt]s?(x)'],
+  // transform: {
+  //   "^.+\\.(t|j)sx?$": ['ts-jest'],
+  // },
+});
