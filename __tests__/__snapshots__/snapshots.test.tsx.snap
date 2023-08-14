@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toMatchSnapshot 1`] = `
+<taro-view-core>
+  <taro-text-core>
+    Hello world!
+  </taro-text-core>
+</taro-view-core>
+`;
+
+exports[`will fail every time 2`] = `"<div id="idNumber">Lorem ipsum</div>"`;

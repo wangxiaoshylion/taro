@@ -1,9 +1,16 @@
 {
-  "extends": ["taro/react", "prettier"], // extends-可以继承一些现成的eslint规则包（eslint-config-airbnb、eslint-config-google）
+  "extends": [
+    "taro/react",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ], // extends-可以继承一些现成的eslint规则包（eslint-config-airbnb、eslint-config-google）
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "import/no-commonjs": "off"
+    "import/no-commonjs": "off",
+    "@typescript-eslint/no-var-requires": "off"
   },
   "plugins": ["@typescript-eslint", "react"],
   "parser": "@typescript-eslint/parser", // 解析器-解析代码的插件工具，将源码解析为AST抽象语法树，插件可以执行静态分析、检查和转换

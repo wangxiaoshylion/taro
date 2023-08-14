@@ -1,15 +1,20 @@
+import React from 'react';
 import { View, Text } from '@tarojs/components';
-import { useLoad } from '@tarojs/taro';
+// import { useLoad } from '@tarojs/taro';
 import './index.less';
 
-export default function Index() {
-  useLoad(() => {
-    console.log('Page loaded.');
-  });
+interface Iprops {
+  title?: string;
+}
+
+export default function Index({ title }: Iprops) {
+  // useLoad(() => {
+  //   console.log('Page loaded.');
+  // });
 
   return (
     <View className="index">
-      <Text>Hello world!</Text>
+      <Text>{title ?? 'Hello world!'}</Text>
     </View>
   );
 }
