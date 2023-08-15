@@ -28,7 +28,7 @@
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "git-cz": "cz",
-    "test": "jest --watch",
+    "test": "jest",
     "test:coverage": "jest --coverage",
     "changelog": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -r 0"
   },
